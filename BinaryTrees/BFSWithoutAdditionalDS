@@ -1,0 +1,80 @@
+
+import common.BinaryTreeNode;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author anupam
+ */
+public class BFSWithoutAdditionalDS {
+    BinaryTreeNode root;
+    public void map(BinaryTreeNode node) {
+        if(node.left == null && node.right == null) {
+            return;
+        }
+        else {
+            node.left.used = node.right;
+            map(node.left);
+            map(node.right);
+        }
+            
+    }
+    public void print(BinaryTreeNode node) {
+        System.out.println();
+        if(node.left == null && node.right == null) {
+            BinaryTreeNode temp = node;
+            while(temp.used !=null) {
+                System.out.print(temp.value+",");
+                
+                temp = temp.used;
+            }
+            System.out.print(temp.value);
+        }
+        else {
+            BinaryTreeNode temp = node;
+            while(temp.used !=null) {
+                System.out.print(temp.value);
+                temp = temp.used;
+            }
+             System.out.print(temp.value);
+            print(node.left);
+            print(node.right);
+        }
+    }
+    public static void main(String[] args) {
+        BFSWithoutAdditionalDS obj = new BFSWithoutAdditionalDS();
+        obj.makeTree();
+        obj.map(obj.root);
+        obj.print(obj.root);
+    }
+    
+    public BinaryTreeNode makeTree() { 
+        this.root = new BinaryTreeNode();
+        root.value = 10;
+        BinaryTreeNode temp = new BinaryTreeNode();
+        temp.value = 12;
+        root.left = temp;
+        BinaryTreeNode temp2 = new BinaryTreeNode();
+        temp2.value = 11;
+        root.right = temp2;
+        BinaryTreeNode temp3 = new BinaryTreeNode();
+        BinaryTreeNode temp4 = new BinaryTreeNode();
+        temp3.value = 13;
+        temp4.value = 14;
+        temp2.left = temp3;
+        temp2.right = temp4;
+        BinaryTreeNode temp5 = new BinaryTreeNode();
+        BinaryTreeNode temp6 = new BinaryTreeNode();
+        temp5.value = 15;
+        temp6.value = 16;
+        temp4.left = temp5;
+        temp4.right = temp6;
+        return root;
+    }
+    
+}
