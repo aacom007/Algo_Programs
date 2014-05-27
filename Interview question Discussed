@@ -1,0 +1,35 @@
+A.Z - Interview 1
+// Question Description
+
+Class Item
+{
+  int id;
+  string name;
+  double price;
+  float rating;
+  double costForShipping;
+  int shipBy;
+  int delieverBy;
+}
+
+// User has $ X as store credit.
+//Catalog C has all items listed.
+//All purchase should be made for items > 2.5 rating.
+// Aim is to maximize the number of items and use all credit.
+//
+
+//constraints
+ item costForShipping is inversely proportional to delieverBy. 
+
+delieverBy  Price
+1 day          y1
+2 day          y2
+3 day          y3
+4 day          y4
+
+
+// variables
+
+Max number  inversely prop to costForShipping
+
+costForShipping inversely prop to delieverBy
