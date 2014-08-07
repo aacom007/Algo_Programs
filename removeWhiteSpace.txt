@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package min_no_palindrome;
+
+import jdk.nashorn.internal.objects.NativeArray;
+
+/**
+ *
+ * @author akshay anand
+ */
+public class removeWhiteSpace {
+        int lastElement=0;
+        int nextElement=0;
+    public char[] testRemoveWhiteSpace(String str){
+        
+        //char array
+        char [] strArray = str.toCharArray();
+        if(str.length()>1)
+        {
+            nextElement=1;
+            lastElement=0;
+        }
+        if(str.length()==1)
+        {
+            return strArray;
+        }
+        
+        if(str.isEmpty())
+            return strArray;
+        
+        if(str.contains(" "))
+        {
+
+            while(lastElement < strArray.length-1)
+            {
+                
+                if(nextElement==lastElement && nextElement< strArray.length)
+                {
+                    nextElement=nextElement+1;
+                }
+                if(strArray[lastElement]==' ')
+                {
+                    
+                }
+                if(strArray[nextElement]==' ' && nextElement<strArray.length)
+                {
+                    nextElement=nextElement+1;
+                }
+                if(strArray[lastElement]!=' ' && lastElement< strArray.length && lastElement<nextElement+1)
+                { 
+                    lastElement= lastElement+1;
+                }
+                if(strArray[nextElement]!=' ' && strArray[lastElement]==' ')
+                {
+                    strArray[lastElement]= strArray[nextElement];
+                      
+                    if( lastElement < strArray.length )
+                    lastElement++;
+                      
+                    if( nextElement < strArray.length )
+                    nextElement++;
+                }
+                
+              
+                      
+                if(lastElement== strArray.length   )
+                   return strArray;    
+            }
+        }
+          
+        return strArray;
+    
+    }
+    
+    
+}
