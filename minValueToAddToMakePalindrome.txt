@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package min_no_palindrome;
+
+/**
+ *
+ * @author akshay anand
+ */
+public class Min_no_palindrome {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+      
+    String input ="asass";
+    Integer len = input.length();
+    Integer flag =0;
+    for(int i=0;i<len;i++)
+    {
+        char[] ch = input.substring(i,len).toCharArray();
+        
+        if(checkCharArray(ch))
+        {
+            flag =i;
+            break;
+        }
+        
+    }
+    
+    System.out.print("characters to be added = "+ input.substring(0,flag));
+    
+    
+    }
+    
+    public static boolean checkCharArray(char[] arr)
+    {
+        Integer len = arr.length;
+        
+        if(len ==1)
+            return true;
+        if (len%2 ==0)
+        {
+            for(int i=0;i<(len)/2;i++)
+            {
+                if(arr[i]==arr[len-i-1])
+                    continue;
+                else
+                    return false;
+            }
+        }
+        else
+            return false;
+        
+        return true;
+    }
+    
+}
