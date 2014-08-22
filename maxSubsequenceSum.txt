@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace maxsubsequencesum
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+
+        int [] arry ={-5,-4, 3,-4, 10,5,9,-6};
+        int count = arry.Length;
+        
+        
+        int []sum =new int[count] ;
+       
+        int i =1;
+            while(i<count-1)
+            {
+
+           
+          
+            if(arry[i] >0)
+               {
+            
+                sum[i]=sum[i-1]+arry[i];
+
+              }
+
+              if(arry[i]<0 && sum[i-1]+arry[i]<0)
+              sum[i]=0;
+
+            i++;
+            }
+
+
+            for(i=0;i<count;i++)
+
+            Console.WriteLine( sum[i]);
+
+            max(sum);
+
+            Console.Read();
+        }
+
+        public static void max(int[] arry)
+        { int max = 0;
+            for(int i=0 ; i<arry.Length ; i++)
+                if(arry[i]>max)
+                {
+                    max = arry[i];
+                }
+        
+
+        Console.WriteLine("Max val:"+max);
+        }
+
+
+    }
+}
