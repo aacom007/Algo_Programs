@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nextnumber
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            String a ="aaaannnnnnvvvvvv";
+            int i =0, j=0;
+            char [] unique = new char[a.Length];
+            while(a.Length >i)
+            {
+                if(!unique.Contains( a[i]))
+                {
+                    unique[j++]=a[i];
+                }
+                i++;
+            }
+
+               foreach (char s in unique)
+               {
+                int val= value(s, a);
+
+                if(s!='\0')
+                Console.Write(string.Format(""+s+val));
+               }
+            Console.Read();
+        }
+
+        static int value( char a, string s)
+        {
+        char [] charArr  = s.ToCharArray();
+        int i=0;
+        int count =0;
+        while(charArr.Length>i)
+             {
+                 if(charArr[i].Equals(a))
+                 {count ++;}
+                i++;
+             }
+        
+        return count;
+        }
+
+    }
+}
