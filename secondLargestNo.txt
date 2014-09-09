@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace maxmulti
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            int [] a = {2,3,56,7,4};
+            int [] b= { 2, 3, 56, 7, 4, 55 };
+
+           int m1 = findMax(a);
+           int m2 = findMax(b);
+
+           Console.WriteLine(m1);
+           Console.WriteLine(m2);
+           Console.WriteLine(m1*m2);
+           Console.Read();
+
+        }
+        public static int findMax(int [] x)
+        {
+            int max=x [0];
+            int max2=max;
+            if(x !=null)
+            {
+                
+                int i =0;
+                
+               
+                int len = x.Length;
+                
+                while(i<len)
+                {
+                    if(x[i]>max)
+                    {
+                        max2 = max;
+                        max = x[i];
+                    }
+                    if(x[i]>max2 && x[i]<max)
+                    {
+                        max2 =x[i];
+                    }
+                    i++;
+                }
+            }
+            else 
+            return -1;
+            
+            return max2;
+        }
+    }
+}
