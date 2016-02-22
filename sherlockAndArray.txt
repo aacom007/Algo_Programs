@@ -1,0 +1,61 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    
+    public static class sum{
+        int sum =0, j=0, input =0;
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner br = new Scanner(System.in);
+        Integer m =0;
+        Integer cases = br.nextInt();
+        
+        for(int i=0;i<cases;i++){
+            
+            Integer len = br.nextInt();
+            // read all values
+            Integer totalSum =0;
+            ArrayList<sum> curr = new ArrayList<sum>();
+             
+            for(int j=0;j<len;j++){
+                sum cur = new sum();
+                m = br.nextInt();
+                 //System.out.print("Current inpur  "+ m);
+                totalSum += m;
+                cur.sum = totalSum;
+                cur.input =  m;
+                cur.j = j;
+                curr.add(cur);
+            }
+            
+            Integer flag =0;
+            for(sum s : curr){
+                Integer val = s.sum-s.input;
+                //System.out.print("Current inpur  "+ val);
+                Integer Summ =0;
+                for(int j=s.j; j<len;j++){
+                    if(j+1<len){
+                        Summ += curr.get(j+1).input;
+                    }
+                } 
+               // System.out.print("Total -sum "+ Summ + " Val "+ val);
+                if(Summ==val){
+                    flag =1;
+                }
+                Summ =0;
+            }
+            if(flag ==0){
+                System.out.println("NO");                            
+            } else {
+                System.out.println("YES");
+            }
+            flag= 0;
+        };
+    }
+}
