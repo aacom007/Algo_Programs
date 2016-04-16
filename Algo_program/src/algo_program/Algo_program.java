@@ -17,6 +17,12 @@ public class Algo_program {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int a = 4;
+        int n = -2;
+        power x = new power();
+        
+        System.out.println( "Power of 4 to 3 is: "+ (double)x.callPower(a, n) );
+        
     }
     
 }
