@@ -15,16 +15,39 @@ public class Algo_program {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        String str  = "aabcccsssssdfsssseb ";
+//        String str  = "aabcccsssssdfsssseb ";
+//        
+//        continous x = new continous();
+//        char [] input = str.toCharArray();
+//        
+//        for(int i =0;i< input.length; i++){
+//        
+//            x.nextValue(input[i]);
+//        }
+       int n =5;
+        int [][]mat = new  int[n][n];
         
-        continous x = new continous();
-        char [] input = str.toCharArray();
-        
-        for(int i =0;i< input.length; i++){
-        
-            x.nextValue(input[i]);
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++)
+                mat[i][j] = j+n*i;
         }
         
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++)
+                System.out.print(mat[i][j]+" ");
+            System.out.println();
+        }
+        
+        matrixRotation x = new matrixRotation();
+        mat = x.rotate(mat);
+        
+         
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++)
+                System.out.print(mat[i][j]+" ");
+            System.out.println();
+        }
     }
     
     
