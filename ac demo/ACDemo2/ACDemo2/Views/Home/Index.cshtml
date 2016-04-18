@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>A C - Demo</h1>
+    <p class="lead"> This is a test application</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>To Know More</h2>
+        <p>Go to Home @Html.ActionLink("Home", "Index", "Home")</p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Sign Up</h2>
+        <p>Sign up here for a new account @Html.ActionLink("SignUp", "Signup", "Home") </p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Log-in</h2>
+        <p>Login here @Html.ActionLink("LogIn", "Login", "Home")</p>
+    </div>
+</div>
