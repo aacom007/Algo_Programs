@@ -1,0 +1,44 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace anagrams
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1 = "abdcd";
+            string str2 = "bcadd";
+
+            int[] set = new int[256];
+            int Flag = 0;
+            
+
+            for (int i = 0; i < str1.Length; i++)
+            {
+                set[str1[i]]++;
+            }
+            
+            for (int j = 0; j < str2.Length; j++) {
+                if (--set[str2[j]] < 0)
+                {
+                    Flag = 1;   
+                }
+            }
+
+            if (Flag == 0)
+            {
+                Console.Write("It's an Anagram");
+            }
+            else
+            {
+                Console.WriteLine("Not an Anagram");
+            }
+            Console.ReadKey();
+        }
+    }
+}
