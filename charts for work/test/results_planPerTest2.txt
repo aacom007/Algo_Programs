@@ -1,0 +1,7 @@
+Detector: OutOfRange, Constuctor: LastGood, Plans Per Test: 10, Comb Per Plan: 1, CPU: 0, RAM: 1873.414
+Detector: OutOfRange, Constuctor: LastGood, Plans Per Test: 30, Comb Per Plan: 1, CPU: 0.535714285714286, RAM: 1018.679
+Detector: OutOfRange, Constuctor: LastGood, Plans Per Test: 20, Comb Per Plan: 1, CPU: 0.241379310344828, RAM: 1397.931
+Detector: OutOfRange, Constuctor: LastGood, Plans Per Test: 25, Comb Per Plan: 1, CPU: 0.607142857142857, RAM: 1194
+Detector: OutOfRange, Constuctor: LastGood, Plans Per Test: 22, Comb Per Plan: 1, CPU: 0.310344827586207, RAM: 1318.138
+Detector: OutOfRange, Constuctor: LastGood, Plans Per Test: 21, Comb Per Plan: 1, CPU: 0.172413793103448, RAM: 1348.793
+Detector: OutOfRange, Constructor: LastGood, MaxValue: 21

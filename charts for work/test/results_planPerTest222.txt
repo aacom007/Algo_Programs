@@ -1,0 +1,10 @@
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 10, Comb Per Plan: 1, CPU: 0, RAM: 1725.069
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 30, Comb Per Plan: 1, CPU: 0.535714285714286, RAM: 869.3929
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 20, Comb Per Plan: 1, CPU: 0, RAM: 1233.897
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 25, Comb Per Plan: 1, CPU: 0.206896551724138, RAM: 1042.034
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 27, Comb Per Plan: 1, CPU: 0.0714285714285714, RAM: 996.0714
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 28, Comb Per Plan: 1, CPU: 0.241379310344828, RAM: 939.5862
+Detector: SignalSpike, Constuctor: Fixed, Plans Per Test: 29, Comb Per Plan: 1, CPU: 0.0344827586206897, RAM: 955.2069
+Detector: SignalSpike, Constructor: Fixed, MaxValue: 29
+
+
