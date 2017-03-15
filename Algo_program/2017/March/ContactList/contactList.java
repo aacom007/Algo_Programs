@@ -18,7 +18,9 @@
 public  class ContactList {
     
     private int samename        = 0;
+    
     String name                 = "";
+   
     static ContactList [] child = new ContactList[26];
           
     public  void add( String s, ContactList c, int index )
@@ -47,11 +49,15 @@ public  class ContactList {
     }
     
     public static ContactList findChar(char c){
+        
         return child[(int)(c-'a')];
+        
     }
     
     public static boolean find(String s){
+       
         int i            = 0;
+        
         ContactList node = null;
 
         while( i<s.length() ) {
