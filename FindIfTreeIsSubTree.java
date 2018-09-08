@@ -6,7 +6,7 @@
 
 /**
  * program to find if treeB is a subtree of treeA or not
- * @author anupam
+ * @author akshay anand
  */
 public class FindIfTreeIsSubTree {
     boolean check(Node treeA, Node treeB) {
