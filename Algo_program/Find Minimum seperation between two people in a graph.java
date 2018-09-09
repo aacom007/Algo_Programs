@@ -1,5 +1,7 @@
 //'main' method must be in a class 'Rextester'.
 //Compiler version 1.8.0_111// 8:06
+// Author: akshay anand
+// dated: 090918
 
 import java.util.*;
 import java.lang.*;
