@@ -1,0 +1,12 @@
+// Approach 1
+// O(n) where n is the kth prime number
+// prime numbers  kth
+	var k = 12;
+	var n = 1;
+	while(k>0){
+		if(n%2 !=0 && n%3!=0 && n%5!=0){
+			console.log(n);
+			k--;
+		}
+		n++;
+	}
