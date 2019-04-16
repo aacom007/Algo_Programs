@@ -88,24 +88,4 @@ class Solution2 {
 }
 
 
-/* 
 
-Given two strings of positive integers, find the largest number you can form by interleaving the digits.
-
-Input: '135', '246'
-Output: '246135'
-
-Input: '531', '642'
-Output: '654321'
-
-Input: '3', '8127'
-Output: '83127'
-
-'135', '246'
- ^         ^
- 
- 
- 246135
-
-
- */
