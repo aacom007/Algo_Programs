@@ -1,0 +1,8 @@
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 10, Comb Per Plan: 1, CPU: 0, RAM: 1986.138
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 30, Comb Per Plan: 1, CPU: 0.655172413793103, RAM: 906.7931
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 20, Comb Per Plan: 1, CPU: 0, RAM: 1318.897
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 25, Comb Per Plan: 1, CPU: 0.321428571428571, RAM: 1097.964
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 22, Comb Per Plan: 1, CPU: 0.103448275862069, RAM: 1228.586
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 23, Comb Per Plan: 1, CPU: 0.103448275862069, RAM: 1229.103
+Detector: NullValue, Constuctor: Fixed, Plans Per Test: 24, Comb Per Plan: 1, CPU: 0.241379310344828, RAM: 1183.759
+Detector: NullValue, Constructor: Fixed, MaxValue: 24

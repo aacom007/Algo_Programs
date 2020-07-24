@@ -1,0 +1,224 @@
+// Imagine we have an image. We'll represent this image as a simple 2D array where every pixel is a 1 or a 0. The image you get is known to have a single rectangle of 0s on a background of 1s.
+
+// Write a function that takes in the image and returns one of the following representations of the rectangle of 0's: top-left coordinate and bottom-right coordinate OR top-left coordinate, width, and height.
+
+// image1 = [
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 0, 0, 0, 1],
+//   [1, 1, 1, 0, 0, 0, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+// ]
+
+// Sample output variations (only one is necessary):
+
+// findRectangle(image1) =>
+//   x: 3, y: 2, width: 3, height: 2
+//   2,3 3,5 -- row,column of the top-left and bottom-right corners
+
+// Other test cases:
+
+// image2 = [
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 0],
+// ]
+
+// findRectangle(image2) =>
+//   x: 6, y: 4, width: 1, height: 1
+//   4,6 4,6
+
+// image3 = [
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 0, 0],
+//   [1, 1, 1, 1, 1, 0, 0],
+// ]
+
+// findRectangle(image3) =>
+//   x: 5, y: 3, width: 2, height: 2
+//   3,5 4,6
+  
+// image4 = [
+//   [0, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+//   [1, 1, 1, 1, 1, 1, 1],
+// ]
+
+// findRectangle(image4) =>
+//   x: 0, y: 0, width: 1, height: 1
+//   0,0 0,0
+
+// image5 = [
+//   [0],
+// ]
+
+// findRectangle(image5) =>
+//   x: 0, y: 0, width: 1, height: 1
+//   0,0 0,0
+
+
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution {
+  
+  public class Result{
+    int x;
+    int y;
+    int width;
+    int height;
+    
+    public void print(){
+      System.out.println("x: "+this.x+", y: "+this.y+", width: "+this.width+", height: "+this.height);
+    }
+    
+    public Result(int x,int y, int w, int h){
+      this.x=x;
+      this.y=y;
+      this.width=w;
+      this.height=h;
+    }
+  }
+  
+  // O(1) space complexity
+  // O(m*n) time complexity
+  // m = height , n = width of rect.
+  public Result findRectangle(int[][] img){
+    
+    int countX = 0;
+    int x = 0;
+    int flag = 0;
+    int y = 0;
+    int countY = 0;
+    
+    // base case
+    // ignore
+    if(img==null)
+      return new Result(0,0,0,0);
+    
+    int w = img[0].length;
+    int h = img.length;
+    
+    if(w==1 && h==1){
+      if(img[0][0]==0)
+        return new Result(0,0,1,1);
+    }
+    
+    if(w==0||h==0){
+      return new Result(0,0,0,0);
+    } 
+    
+    flag = 0;
+    
+    for(int i=0;i<img.length;i++){
+      for(int j=0;j<img[0].length;j++){
+        if(img[i][j]==0){
+          countY++;
+          if(flag==0){
+              y = j;
+              x = i;
+              flag = 1;
+          }
+        }
+      }
+      if(countY>0){
+         break;
+      }
+    }
+
+    for(int i=x;i<img.length;i++){
+      if(img[i][y]==0){
+        countX++;
+      } 
+    }
+     
+    return new Result(y,x,countY,countX);
+  }
+  
+  
+  public static void main(String[] args) {
+    int[][] image1 = {
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 0, 0, 0, 1},
+      {1, 1, 1, 0, 0, 0, 1},
+      {1, 1, 1, 1, 1, 1, 1}
+    };
+
+    int[][] image2 = {
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 0}
+    };
+
+    int[][] image3 = {
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 0, 0},
+      {1, 1, 1, 1, 1, 0, 0}
+    };
+
+    int[][] image4 = {
+      {0, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1},
+      {1, 1, 1, 1, 1, 1, 1}
+    };
+
+    int[][] image5 = {
+      {0}
+    };
+
+    int[][] image6 = null;
+    
+    Solution s = new Solution();
+    
+    
+    Result r = s.findRectangle(image1);
+    r.print();
+
+    r = s.findRectangle(image2);
+    r.print();
+
+    r = s.findRectangle(image3);
+    r.print();
+
+
+    r = s.findRectangle(image4);
+    r.print();
+
+    r = s.findRectangle(image5);
+    r.print();
+    
+    r = s.findRectangle(image6);
+    r.print();
+  }
+}
+
+
+
+
+
+
+/* 
+Your previous Markdown content is preserved below:
+
+Welcome to the Interview!
+ */

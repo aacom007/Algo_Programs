@@ -1,0 +1,33 @@
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplaySample.exe
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplaySample.pdb
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\MainWindow.baml
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\MainWindow.g.cs
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\App.g.cs
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample_MarkupCompile.cache
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.g.resources
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.Properties.Resources.resources
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.exe
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.pdb
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplay.dll
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplay.pdb
+c:\users\mesta\documents\visual studio 2010\Projects\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\ru-ru\DynamicDataDisplay.resources.dll
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.exe
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.pdb
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplaySample.exe
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplaySample.pdb
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplay.dll
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\DynamicDataDisplay.pdb
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\bin\Debug\ru-ru\DynamicDataDisplay.resources.dll
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.csprojResolveAssemblyReference.cache
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\MainWindow.baml
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\MainWindow.g.cs
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\App.g.cs
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample_MarkupCompile.cache
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.g.resources
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.Properties.Resources.resources
+B:\Work\Cisoft\SPDF code\ReportGenerator\DynamicDataDisplaySample\DynamicDataDisplaySample\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.csproj.GenerateResource.Cache
+B:\Work\Cisoft\SPDF code\ReportGenerator\Report Generator\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.exe
+B:\Work\Cisoft\SPDF code\ReportGenerator\Report Generator\DynamicDataDisplaySample\obj\x86\Debug\DynamicDataDisplaySample.pdb

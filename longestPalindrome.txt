@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace longestPalindrome
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            char [] inm= { 'c', 'a', 'c', 'a', 'c', 'a', 'a' };
+        
+         int min =0, max =0;   
+         int left =0,right=0, start=0;
+            for(int i =0;i< inm.Length;i++)
+            {
+            left=0;
+            right =0;
+           while(i+left>=0 && i+right<inm.Length)
+             
+               { 
+               
+               if(inm[i+left]==inm[i+right])
+                {
+                   
+                    if(max-min<right-left)
+                    {
+                        start=i;
+                        max =right;
+                        min = left;
+                
+                    }
+                    left--;
+                    right++;
+                }
+
+                else
+                break;
+              
+            }
+            }
+
+            int a = (right- left);
+            Console.WriteLine("Maximum palindrome"+ Convert.ToString(a));
+            for(int i =start+min;i<=start+max;i++)
+            Console.Write(inm[i]);
+            Console.Read();
+         //   return 1;
+         }
+    }
+}

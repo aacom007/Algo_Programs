@@ -1,0 +1,86 @@
+//*******************************************************************
+// Author : Akshay Anand
+//*******************************************************************
+
+import java.lang.Math; // headers MUST be above the first class
+import java.util.*;
+
+/*
+11,0	0 	  11			 
+       / \
+      2	  6				 
+     / \  /\	
+10  1  3  5 7   8
+    
+    find sum of two nodes = 11
+    --> loop thru tree create hashset
+    HashSet<Integer> compliments = 11, 9, 5, 10, 8, 6, 4
+    --> loop again and check if element is present?
+    if present then look for compliment of it if both present print
+    
+*/
+// Time Complexity O(n)
+// Space Complexity O(n)
+
+public class Tree{
+	Tree left;
+  	Tree right;
+  	int v;
+  	public Tree(int val){
+  		this.v = val;
+    }
+}
+
+// one class needs to have a main() method
+public class HelloWorld{
+  // arguments are passed using the text field below this editor
+  public static void main(String[] args){
+      Tree root = new Tree(4);
+      Tree a = new Tree(1);
+      Tree b = new Tree(2);
+      Tree c = new Tree(3);
+      Tree d = new Tree(7);
+      Tree e = new Tree(5);  
+      Tree f = new Tree(6);
+      root.left = b;
+      root.right = f;
+      root.left.left = a;
+      root.left.right = c;
+      root.right.left = e;
+      root.right.right = d;
+      OtherClass obj = new OtherClass();
+    int sum = 11;	
+    HashSet<Integer> m = new HashSet<Integer>();
+    obj.start(root, m, sum);
+    obj.printSum(root, m, sum);
+  }
+}
+
+  
+
+// you can add other public classes to this editor in any order
+public class OtherClass{
+  public void start(Tree root, HashSet<Integer> m, int sum){
+  	//if root is null	
+    if(root==null){
+      return;
+    } 
+    if(!m.contains(sum-root.v)){
+      m.add(sum-root.v);
+    } 
+    start(root.left, m, sum);
+    start(root.right, m, sum);
+  }
+  
+  public void printSum(Tree root, HashSet<Integer> m, int sum){
+    if(root!=null){
+      if(m.contains(root.v)){
+        System.out.println(root.v +" "+ (sum-root.v));
+        m.remove(sum-root.v);
+      }
+      printSum(root.left, m, sum);
+      printSum(root.right, m, sum);
+    }
+    return;
+  }
+}

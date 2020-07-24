@@ -1,0 +1,7 @@
+Detector: Duplicate, Constuctor: Interpolate, Plans Per Test: 10, Comb Per Plan: 1, CPU: 0, RAM: 2033.241
+Detector: Duplicate, Constuctor: Interpolate, Plans Per Test: 30, Comb Per Plan: 1, CPU: 0.642857142857143, RAM: 1159.214
+Detector: Duplicate, Constuctor: Interpolate, Plans Per Test: 20, Comb Per Plan: 1, CPU: 0.178571428571429, RAM: 1526.607
+Detector: Duplicate, Constuctor: Interpolate, Plans Per Test: 25, Comb Per Plan: 1, CPU: 0.703703703703704, RAM: 1328.407
+Detector: Duplicate, Constuctor: Interpolate, Plans Per Test: 22, Comb Per Plan: 1, CPU: 0.517241379310345, RAM: 1435.828
+Detector: Duplicate, Constuctor: Interpolate, Plans Per Test: 21, Comb Per Plan: 1, CPU: 0.25, RAM: 1457.357
+Detector: Duplicate, Constructor: Interpolate, MaxValue: 21

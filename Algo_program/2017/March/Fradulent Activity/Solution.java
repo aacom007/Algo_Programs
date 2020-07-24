@@ -1,0 +1,69 @@
+@@ -1,67 +0,0 @@
+import java.io.*;
+//Fraudulent Activity Notifications
+
+
+
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        int [] arr;
+        int d = 0;
+        int n = 0;
+
+        Scanner sc = new Scanner(System.in);
+
+        if(sc.hasNext()){
+            n = sc.nextInt();
+            d = sc.nextInt();
+        }            
+        int i = 0;    
+        arr = new int[n];
+        while(i<n){
+            arr[i++] = sc.nextInt();            
+        }
+
+        int totalNot =0;
+        double medi =0;
+    for(i=d;i<n;i++)
+    {
+        medi = 0.0;
+        int arr2 [] = new int [d];
+        int m =0;
+        
+        for(int j=i-d;j<i;j++){
+            arr2[m++] = arr[j];
+        } 
+
+    //    for(int p=0;p<d;p++)
+//        System.out.print(arr2[p]); 
+  //      System.out.println("");
+
+           medi = medianCalc(arr2);
+        
+            if((double)arr[i]>=medi*2){
+                totalNot++;
+            }
+        //System.out.println(arr[i]+ " "+ medi *2);
+        }
+        System.out.println(totalNot);
+    }
+    
+// Function to calculate Median in an array
+    public static double medianCalc(int [] arr){
+        
+        Arrays.sort(arr);
+        int mid = arr.length/2;
+        if(arr.length % 2 == 1){
+            return arr[mid];
+        } else {
+            //System.out.print("--->"+ Math.ceil((arr[mid-1]+arr[mid])/2));
+            return Math.ceil((arr[mid-1]+arr[mid]/2));
+        }
+    }
+}
+\ No newline at end of file

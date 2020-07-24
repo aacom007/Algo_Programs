@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace firstNonrepeatingNum
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            char [] a = {'a','b','b','a','c','c','a','a','f',};
+            int i =0;
+            char [] b = new char[256];
+            int [] val = new int[256];
+            int j=0;
+            while(i < a.Length)
+            {
+               
+            if(b.Contains(a[i]))
+             
+            {
+                int p = Array.IndexOf(b,a[i]);
+                val[p] =val[p]+1;
+            }
+            else
+            {
+            j++;
+            b[j] = a[i];
+            val[j]=1;
+            }
+            i++;
+            }
+
+
+            for( i =0;i< 256;i++)
+            if(val[i]==1)
+            {
+            Console.Write("first element is :"+ b[i]);
+            Console.Read();
+            return;
+            }
+    }
+    }
+}

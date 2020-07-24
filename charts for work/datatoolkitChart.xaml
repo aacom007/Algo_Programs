@@ -1,0 +1,26 @@
+﻿<Window x:Class="SDPFReportGenerator.datatoolkitChart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        Title="SDPF Report"
+        Height="600"
+        Width="600">
+    <Grid>
+        <DVC:Chart Canvas.Top="80"
+                   Canvas.Left="10"
+                   Name="mcChart"
+                   Background="BlanchedAlmond"
+                   Margin="89,162,27,43">
+            <DVC:Chart.Series>
+                <DVC:LineSeries Title=" CPU Usage"
+                                IndependentValueBinding="{Binding Path=Key}"
+                                DependentValueBinding="{Binding Path=Value}"></DVC:LineSeries>
+                <DVC:LineSeries Title="RAM Usage"
+                                ToolTip="% CPU Threshold Ratio"
+                                IndependentValueBinding="{Binding Path=Key}"
+                                DependentValueBinding="{Binding Path=Value}"></DVC:LineSeries>
+            </DVC:Chart.Series>
+        </DVC:Chart>
+    </Grid>
+</Window>

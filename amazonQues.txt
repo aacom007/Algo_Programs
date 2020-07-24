@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nextnumber
+{
+    class Program
+    {
+        static void Main(string [] args)
+        {
+            String str ="aaaannnnnnvvvvvbcv";
+         char [] arr= new char[255];
+         char [] seq=new char [255];
+         int [] count = new int[255];
+         char[] p = str.ToCharArray();
+         int i =0;
+         int j=0;
+         while(i< str.Length )
+         {
+
+         if(!seq.Contains(p.ElementAt(i)))
+         {
+            seq[j]=p.ElementAt(i);
+            j++;
+         }
+         int ax = Convert.ToInt32(p.ElementAt(i));
+             if(arr [Convert.ToInt32(p.ElementAt(i))]=='\0')
+             {
+                 arr[Convert.ToInt32( p.ElementAt(i))] = p.ElementAt(i);
+                 count[Convert.ToInt32( p.ElementAt(i))] =1;
+             }
+             else if(arr [Convert.ToInt32(p.ElementAt(i))]==p.ElementAt(i))
+             {
+                 count [Convert.ToInt32(p.ElementAt(i))]=count [Convert.ToInt32(p.ElementAt(i))]+1;
+             }
+             i++;
+         }
+
+
+         foreach( char s in seq)
+         {
+            if(count[ Convert.ToInt32(s)]==1)
+            {
+                Console.WriteLine(s);
+            }
+         
+         }
+
+         Console.Read();
+        }
+
+    }
+}

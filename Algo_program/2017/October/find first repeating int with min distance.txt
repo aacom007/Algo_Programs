@@ -1,0 +1,56 @@
+Note: Write a solution with O(n) time complexity and O(1) additional space complexity, since this is what you would be asked to do during a real interview.
+
+Given an array a that contains only numbers in the range from 1 to a.length, find the first duplicate number for which the second occurrence has the minimal index. In other words, if there are more than 1 duplicated numbers, return the number for which the second occurrence has a smaller index than the second occurrence of the other number does. If there are no such elements, return -1.
+
+Example
+
+For a = [2, 3, 3, 1, 5, 2], the output should be
+firstDuplicate(a) = 3.
+
+There are 2 duplicates: numbers 2 and 3. The second occurrence of 3 has a smaller index than than second occurrence of 2 does, so the answer is 3.
+
+For a = [2, 4, 3, 5, 1], the output should be
+firstDuplicate(a) = -1.
+int firstDuplicate(int[] a)
+{
+    int n = a.Length;
+    if(n==0 || n==1)
+    {
+        return -1;
+    }
+    
+    for(int i=0;i<n;i++)
+    {
+        if(a[i] >n || a[i] <1)
+        {
+            return -1;
+        }
+    }
+    
+    Dictionary<int,int> seen = new Dictionary<int,int>();
+    int min = n;
+    int val = -1;
+    
+    for(int i=0;i<n;i++){
+        seen.Add(i,-1);
+    }
+    
+    for(int i =0;i<n;i++)
+    {
+        if(seen.ContainsKey(a[i]) && seen[a[i]]>=0)
+        {
+            int diff = i-seen[Math.Abs(a[i])];
+           
+            if(diff<min)
+            {
+                min = diff;
+                val = a[i];
+            }
+        } 
+        else
+        {
+           seen[a[i]] = i;
+        }
+    }
+    return val;
+}
